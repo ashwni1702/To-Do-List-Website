@@ -1,0 +1,24 @@
+<!--PAGE SHOWS LIST WITH ALL CATEGORIES-->
+{% include "header.html" %}
+<h1> To Dos</h1>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <table>
+            <tbody>
+            {% for to_do in to_dos %}
+            <tr>
+                <td>{{ to_do.id }}</td>
+                <td>{{ to_do.name }}</td>
+                <td>{{ to_do.parent_category }}</td>
+                <td>{{ to_do.due_date }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="col-lg-6 col-md-6 mx-auto text-center">
+    <a class="btn btn-primary" href="{{ url_for('add_new_to_do') }}">New To Do</a>
+</div>
+
+{% include "footer.html" %}

@@ -1,0 +1,151 @@
+body {
+    font-family: "Open Sans";
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #D6CDA4;
+    bottom: 0;
+    font-size: 15px;
+    padding: 45px 0 25px;
+    position: relative;
+    width: 100%;
+}
+
+form {
+    background-color: #EEF2E6;
+    border-radius: 5%;
+    padding: 25px 20px;
+}
+
+h1 {
+    background: #EEF2E6;
+    font-weight: 700;
+}
+
+table {
+    background: #EEF2E6;
+    margin: 20px 20px;
+    width: 50%
+}
+
+th, td {
+    padding: 10px 20px;
+}
+
+.background {
+    background-image: url("https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 25em;
+    height: 100%;
+    padding: 50px 0px 50px;
+}
+
+.btn {
+    background-color: #1C6758;
+    border-color: #1C6758;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #3D8361;
+    border-color: #3D8361;
+    color: white;
+}
+
+.copyright {
+    margin-bottom: 0px;
+}
+
+.dropdown-menu {
+    background-color: #EEF2E6;
+}
+
+.fa-circle {
+    color: #3D8361;
+}
+
+.flashes {
+   background-color: #EEF2E6;
+   color: red;
+   font-style: italic bold;
+}
+
+.form-control {
+    font-size: 15px;
+}
+
+.icon-text {
+   bottom: 0;
+   color:#aaa;
+   font-family:verdana;
+   font-size:11px;
+}
+
+.logo {
+    width: 5%;
+      }
+
+.navbar {
+    background-color: #D6CDA4;
+    border: 0px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    padding: 5px 10px;
+}
+
+
+.nav-link {
+    color: black;
+    float: left;
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 14px 32px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #D6CDA4;
+}
+
+.navbar .brand {
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.dropdown-item {
+    margin-left: 0px;
+}
+
+.sub-text {
+   bottom: 0;
+   color:white;
+   font-family:verdana;
+   font-size:11px;
+   margin-top: 100px;
+}
+
+.sub-text a {
+    color: white;
+    text-decoration: underline;
+}
+
+#name {
+    padding: 20px 0px;
+}

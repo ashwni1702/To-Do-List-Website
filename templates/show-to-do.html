@@ -1,0 +1,53 @@
+<!--SHOW ALL INFORMATION ABOUT THE REQUESTED TO DO-->
+{% include "header.html" %}
+{% with messages = get_flashed_messages() %}
+{% if messages: %}
+{% for message in messages: %}
+<p class="flashes">{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+{% if delete: %}
+<div class="row">
+    <div class="col-lg-6 col-md-6 mx-auto text-center">
+        <a class="btn btn-primary" href="#">Delete anyway</a>
+    </div>
+</div>
+{% endif %}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <table>
+            <tbody>
+            <tr>
+                <th>{{to_do.name}}</th>
+                <th>{{ to_do.parent_category }}</th>
+                <th>{{ to_do.due_date }}</th>
+                <th><a href="#">✅</a></th>
+                <th><a href="#">❌</a></th>
+            </tr>
+
+                <td><a href="#">✅</a></td>
+                <td><a href="#">❌</a></td>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td>#</td>
+                <td>#</td>
+                <td><a href="#">✅</a></td>
+                <td><a href="#">❌</a></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 mx-auto text-center">
+            <a class="btn btn-primary" href="{{url_for('update_to_do', to_do_id = to_do.id)}}">Update To Do</a>
+        </div>
+        <div class="col-lg-6 col-md-6 mx-auto text-center">
+            <a class="btn btn-primary" href="{{url_for('add_new_subtask',to_do_id = to_do.id)}}">New Subtask</a>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}

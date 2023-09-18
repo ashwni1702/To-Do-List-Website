@@ -1,0 +1,30 @@
+<!--HOMEPAGE SHOWS DASHBOARD WITH ALL GOTDONES IN THE DB-->
+{% include "header.html" %}
+<h1> Got Done </h1>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+    <table>
+        <tbody>
+            <tr>
+                <th>Got Done</th>
+                <th>Category</th>
+                <th>Finish Date</th>
+            </tr>
+            {% for got_done in all_got_dones: %}
+            <tr>
+                <td>{{ got_done.name }}</td>
+                <td>{{ got_done.category }}</td>
+                <td>{{ got_done.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 mx-auto text-center">
+            <a class="btn btn-primary" href="{{ url_for('clear_got_done') }}">Clear Got Dones</a>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}

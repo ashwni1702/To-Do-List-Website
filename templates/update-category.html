@@ -1,0 +1,18 @@
+<!--UPDATE CATEGORY IN DATABASE VIA INPUT IN WTFORM-->
+<!--add Bootstrap templates-->
+{% from "bootstrap5/form.html" import render_form %}
+<!--blocks CSS from Bootstrap templates above, so that it uses css template for Styling-->
+{% block content %}
+{% include "header.html" %}
+<h1>Update {{ category.name }}</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 mx-auto">
+              <!-- adds the CategoryForm, turns off browser default validation messages-->
+             {{render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+        </div>
+      </div>
+    </div>
+
+{% include "footer.html" %}
+{% endblock %}

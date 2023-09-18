@@ -1,0 +1,27 @@
+<!--PAGE SHOWS LIST WITH ALL CATEGORIES-->
+{% include "header.html" %}
+<h1> Categories</h1>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <table>
+            <tbody>
+            {% for category in categories %}
+            <tr>
+                <td><a href="{{ url_for('show_category', category=category.name) }}">{{ category.name }}</a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-md-6 mx-auto text-center">
+        <a class="btn btn-primary" href="{{ url_for('add_new_category') }}">New Category</a>
+    </div>
+    <div class="col-lg-6 col-md-6 mx-auto text-center">
+        <a class="btn btn-primary" href="{{ url_for('clear_categories') }}">Delete All Categories</a>
+    </div>
+</div>
+
+
+{% include "footer.html" %}

@@ -1,0 +1,38 @@
+<!--SHOWS ALL TO DOS IN THE REQUESTED CATEGORY-->
+{% include "header.html" %}
+
+<h1>{{ category.name }}</h1>
+<div class="container-fluid">
+    {% with messages = get_flashed_messages() %}
+        {% if messages: %}
+          {% for message in messages: %}
+            <p class="flashes">{{ message }}</p>
+          {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+    <table>
+        <tbody>
+           {% for to_do in category.to_dos_category: %}
+            <tr>
+                <td><a href="{{ url_for('show_to_do', to_do_id=to_do.id) }}">{{ to_do.name }}</a></td>
+                <td>{{ to_do.due_date }}</td>
+                <td><a href="{{ url_for('mark_done', to_do_id=to_do.id) }}">✅</a></td>
+                <td><a href="{{ url_for('delete', to_do_id=to_do.id) }}">❌</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 mx-auto text-center">
+            <a class="btn btn-primary" href="{{url_for('update_category', category_id= category.id)}}">Update Category</a>
+        </div>
+        <div class="col-lg-6 col-md-6 mx-auto text-center">
+            <a class="btn btn-primary" href="{{url_for('add_new_to_do')}}">New To Do</a>
+        </div>
+    </div>
+  </div>
+{% include "footer.html" %}
